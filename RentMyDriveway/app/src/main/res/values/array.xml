@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--- Available states at the moment in the United States -->
+<resources>
+    <string-array name="us_states_string_array">
+        <item>CA</item>
+        <item>NY</item>
+        <item>MA</item>
+        <item>FL</item>
+        <item>WA</item>
+        <item>IL</item>
+        <item>PA</item>
+        <item>TX</item>
+        <item>AZ</item>
+        <item>UT</item>
+    </string-array>
+    <string-array name="countries_string_array">
+        <item>US</item>
+    </string-array>
+</resources>

@@ -1,0 +1,46 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nav_view"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
+    <!-- "Mark Favorite", should appear as action button if possible -->
+
+    <item android:id="@+id/my_account_mipmap"
+        android:icon="@mipmap/ic_person_black_24dp"
+        android:title="My Account"
+        />
+
+    <item android:id="@+id/my_orders_mipmap"
+        android:icon="@mipmap/orders"
+        android:title="Orders"
+        />
+    <item android:id="@+id/map_mipmap"
+        android:icon="@mipmap/maps"
+        android:title="Map"
+        />
+    <item android:id="@+id/parking_mipmap"
+        android:icon="@mipmap/park"
+        android:title="Request"
+        />
+
+
+
+        <item android:id="@+id/qr_scan_mipmap"
+            android:icon="@mipmap/qr_scan"
+            android:title="Scan QR"
+            />
+
+
+        <item android:id="@+id/qr_generate_mipmap"
+        android:icon="@mipmap/qr_code"
+        android:title="Generate(sample)"
+        />
+    <item android:id="@+id/settings_mipmap"
+        android:icon="@mipmap/ic_settings_black_24dp"
+        android:title="Settings"
+        />
+    <item android:id="@+id/about_mipmap"
+        android:icon="@mipmap/info"
+        android:title="About"
+        />
+    </group>
+</menu>

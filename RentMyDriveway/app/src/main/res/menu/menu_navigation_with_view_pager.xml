@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/informationItem"
+        android:title="@string/information_text"
+        />
+
+    <item
+        android:id="@+id/settingsItem"
+        android:title="@string/settings_text"
+        />
+
+    <item
+        android:id="@+id/signOutItem"
+        android:title="@string/sign_out_text"
+        />
+
+</menu>

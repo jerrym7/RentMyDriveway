@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1036300362498",
+    "firebase_url": "https://rentmydriveway-5ef6a.firebaseio.com",
+    "project_id": "rentmydriveway-5ef6a",
+    "storage_bucket": "rentmydriveway-5ef6a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036300362498:android:687701fe0f4ebd05",
+        "android_client_info": {
+          "package_name": "com.challenge.danny.rentmydriveway"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036300362498-3rv28kpm87pnkihq5rqrl0lj7butl8bb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4gKrvjRkg2TOAK_2O6a78fMa4JsYvmww"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,59 @@
+<resources>
+
+    <!-- Google Maps API Key -->
+    <string name="google_maps_api_key">AIzaSyB8qmrN9O_0U3S1cN1j9f82ypSHv5ksZMs</string>
+
+    <!-- Splash Screen -->
+    <string name="app_name">RentMyDriveway</string>
+
+    <!-- Login Activity -->
+    <string name="email_text">Enter Email</string>
+    <string name="password_text">Enter Password</string>
+    <string name="loginText">Login</string>
+    <string name="noAccount">Don"'"t Have An Account? Register</string>
+    <!-- Register Activity -->
+    <string name="alreadyAccount">Have an account? Log in</string>
+    <string name="name_text">Enter full name</string>
+    <string name="register">Register</string>
+
+    <!-- Choose Service Activity -->
+    <string name="lookingForParking">Looking For Parking</string>
+    <string name="RentingOutYourDriveway">Renting Out Your Driveway</string>
+
+    <!-- Drawer -->
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+
+    <!-- Rent Out Activity -->
+    <string name="drivewayname">Enter a nickname for driveway</string>
+    <string name="name">Enter your full name</string>
+    <string name="address">Enter street address</string>
+    <string name="city">Enter city</string>
+    <string name="zipcode">Enter zip code</string>
+    <string name="state">Select your state</string>
+    <string name="country">Select your country</string>
+    <string name="information">Driveway Information: </string>
+    <string name="spacelots">Choose how many spaces</string>
+    <string name="startTime">Enter start time: --:--</string>
+    <string name="endTime">Enter end time: --:--</string>
+    <string name="addDrivewayPic">Add driveway picture</string>
+    <string name="submit">Submit</string>
+    <string name="enterState">Enter state</string>
+    <string name="enterCountry">Enter country</string>
+
+
+    <!-- Bottom Navigation View Items -->
+    <string name="information_text">Information</string>
+    <string name="settings_text">Settings</string>
+    <string name="sign_out_text">Sign Out</string>
+
+
+    <!-- Host Settings Activity -->
+    <string name="forgot_password_text">Forgot Password</string>
+    <string name="change_password_text">Change Password</string>
+    <string name="deactivate_account_text">Deactivate account</string>
+
+
+
+</resources>

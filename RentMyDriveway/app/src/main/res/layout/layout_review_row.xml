@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blueGray">
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_imageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/driveway_icon_regular"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="3dp" />
+    <Space
+        android:layout_width="5dp"
+        android:layout_height="8dp"
+        android:id="@+id/blank_space_1"
+        android:layout_toRightOf="@+id/profile_imageView"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/username_textView"
+        android:layout_toRightOf="@+id/profile_imageView"
+        android:layout_below="@+id/blank_space_1"
+        android:hint="Username"
+        android:paddingLeft="10dp"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="16sp"/>
+    <Space
+        android:layout_width="5dp"
+        android:layout_height="12dp"
+        android:id="@+id/blank_space_2"
+        android:layout_toRightOf="@+id/username_textView"/>
+    <Space
+        android:layout_width="30dp"
+        android:layout_height="12dp"
+        android:id="@+id/blank_space_3"
+        android:layout_toRightOf="@+id/username_textView"/>
+
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_ratingBar"
+        android:layout_toRightOf="@+id/blank_space_3"
+        android:layout_below="@+id/blank_space_2"
+        android:rating="4.9"
+        style="@style/Widget.AppCompat.RatingBar.Small"/>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:id="@+id/blank_space_4"
+        android:layout_below="@+id/profile_imageView"/>
+    <Space
+        android:layout_width="50dp"
+        android:layout_height="10dp"
+        android:id="@+id/blank_space_5"
+        android:layout_below="@+id/blank_space_4"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/comment_textView"
+        android:layout_below="@+id/blank_space_4"
+        android:layout_toRightOf="@+id/blank_space_5"
+        android:hint="comment goes here"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"/>
+
+</RelativeLayout>
