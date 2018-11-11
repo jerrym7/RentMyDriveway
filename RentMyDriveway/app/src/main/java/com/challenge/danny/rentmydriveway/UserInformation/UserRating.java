@@ -9,6 +9,10 @@ public class UserRating {
     String comment;
     double rating;
 
+    public UserRating(){
+
+    }
+
     public UserRating(String userName, String comment, double rating){
         this.userName = userName;
         this.comment = comment;
