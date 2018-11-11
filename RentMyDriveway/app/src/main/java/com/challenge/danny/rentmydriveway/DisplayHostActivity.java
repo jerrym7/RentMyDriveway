@@ -83,7 +83,7 @@ public class DisplayHostActivity extends AppCompatActivity {
                             Toast.makeText(DisplayHostActivity.this,"Error loading host information...",Toast.LENGTH_SHORT).show();
                         }
                         else {
-
+                            hostNameTextView.setText(hostUId);
                         }
                     }
 

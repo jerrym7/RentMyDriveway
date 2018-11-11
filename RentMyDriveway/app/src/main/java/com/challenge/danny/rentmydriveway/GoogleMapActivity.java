@@ -234,12 +234,14 @@ public class GoogleMapActivity extends AppCompatActivity implements OnMapReadyCa
                 if(!previousMarker.getPosition().toString().equals(marker.getPosition().toString())){
                     clickCounter = 0;
                     marker.showInfoWindow();
+                    clickCounter = clickCounter +1;
                     previousMarker = marker;
                     return false;
                 }
                 else{
                     if(clickCounter >= 0){//check if double clicked
                         marker.hideInfoWindow();
+                        clickCounter = 0;
                         Intent i = new Intent(GoogleMapActivity.this,DisplayHostActivity.class);
                         Bundle bundle = new Bundle();
                         bundle.putParcelable("mLatLng",marker.getPosition());
