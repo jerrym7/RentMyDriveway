@@ -15,13 +15,29 @@
       },
       "oauth_client": [
         {
+          "client_id": "1036300362498-3qjcv0at2rite4th6v7c3lfs259v25f0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.challenge.danny.rentmydriveway",
+            "certificate_hash": "85c9ccf2d22b504e6343346e2303c78e661490d1"
+          }
+        },
+        {
+          "client_id": "1036300362498-nvd2s6oc023kflbq0tk37g2hopum2oiv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.challenge.danny.rentmydriveway",
+            "certificate_hash": "58a74d007d24cdd857b29a2f84a264026b17345b"
+          }
+        },
+        {
           "client_id": "1036300362498-3rv28kpm87pnkihq5rqrl0lj7butl8bb.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB4gKrvjRkg2TOAK_2O6a78fMa4JsYvmww"
+          "current_key": "AIzaSyAstKdAeZZcNGeDpXIYsokC8ukmbq0I04Y"
         }
       ],
       "services": {
@@ -29,8 +45,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1036300362498-3rv28kpm87pnkihq5rqrl0lj7butl8bb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

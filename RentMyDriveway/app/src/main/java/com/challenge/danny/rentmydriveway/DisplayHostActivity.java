@@ -52,9 +52,10 @@ public class DisplayHostActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hostinfo_display);
         startWidgets();
-        Bundle bundle = getIntent().getParcelableExtra("bundle");//get the marker information from intent
-        hostLatLng = bundle.getParcelable("mLatLng");//get marker
-        Log.d("DisplayHostActivity",hostLatLng.latitude+" , " +hostLatLng.longitude);
+        //Bundle bundle = getIntent().getParcelableExtra("bundle");//get the marker information from intent
+        //hostLatLng = bundle.getParcelable("mLatLng");//get marker
+        //Log.d("DisplayHostActivity",hostLatLng.latitude+" , " +hostLatLng.longitude);
+        hostLatLng = new LatLng(33.7823542 , -118.1640874);
         getHostUid(hostLatLng);
         listView = findViewById(R.id.list);
         dataModels = new ArrayList<>();
