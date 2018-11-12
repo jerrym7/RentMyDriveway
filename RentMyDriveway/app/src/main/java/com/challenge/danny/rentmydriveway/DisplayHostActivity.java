@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -47,11 +48,11 @@ public class DisplayHostActivity extends AppCompatActivity {
     private ReviewCustomAdapter adapter;
     private DatabaseReference ref;
     private Host host;
+    private TextView hostAverageStarsTextView;
     private String latLngString;
     private LatLng hostLatLng;
     private String hostUId;
-    private double sumOfRatings = 0; //total stars of all users
-    private int totalOfRatings = 0;//default at no people rated
+    private int totalOfStars = 0;//default at no people rated
     private ArrayList<UserRating> hostReviewArrayList;
     private FloatingActionButton addReviewFloatingButton;
     private RelativeLayout floatingLayout;
@@ -75,6 +76,7 @@ public class DisplayHostActivity extends AppCompatActivity {
         getHostUid(hostLatLng);
 
     }
+
     private void onButtonClick(){
         addReviewFloatingButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -208,7 +210,6 @@ public class DisplayHostActivity extends AppCompatActivity {
     }
 
     public void displayReviews(ArrayList<UserRating> hostReviewArrayList) {
-        totalOfRatings = hostReviewArrayList.size();
         dataModels.clear();
         for (UserRating userRating : hostReviewArrayList) {
             dataModels.add(new UserRatingDataModel(userRating.getUserName(), userRating.getComment(), (int) userRating.getRating()));
@@ -227,7 +228,6 @@ public class DisplayHostActivity extends AppCompatActivity {
 
     }
     public void displayReviews(UserRating userRating) {
-        totalOfRatings = totalOfRatings+1;
 
             dataModels.add(new UserRatingDataModel(userRating.getUserName(), userRating.getComment(), (int) userRating.getRating()));
         adapter = new ReviewCustomAdapter(dataModels, getApplicationContext());
@@ -241,6 +241,19 @@ public class DisplayHostActivity extends AppCompatActivity {
 
 
         });
+        getHostStars();
+    }
+    private void getHostStars(){
+        totalOfStars = 0;
+        for(UserRatingDataModel atUserIndexDataModel : dataModels){
+            totalOfStars = totalOfStars + (int) atUserIndexDataModel.getRating();
+        }
+
+        int posibleStars = dataModels.size() * 5;
+        float getAverageHostStars = (float) totalOfStars / posibleStars * 5;
+        hostAverageStarsTextView.setText(getAverageHostStars+"");
+        hostRatingBar.setRating(getAverageHostStars);
+
     }
 
     /*
@@ -252,6 +265,7 @@ public class DisplayHostActivity extends AppCompatActivity {
         hostProfileImageView = findViewById(R.id.host_profile_imageView);
         hostDrivewayImageView = findViewById(R.id.host_house_imageView);
         hostRatingBar = findViewById(R.id.host_rate_ratingBar);
+        hostAverageStarsTextView = findViewById(R.id.host_rate_textView);
         //add user rating widgets
         addReviewFloatingButton = findViewById(R.id.floating_button_rating);
         floatingLayout = findViewById(R.id.floating_layout);
