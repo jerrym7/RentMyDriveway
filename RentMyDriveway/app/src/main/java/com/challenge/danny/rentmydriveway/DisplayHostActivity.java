@@ -82,7 +82,7 @@ public class DisplayHostActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(currentUserid.equals(hostUId)){
-                    Toast.makeText(DisplayHostActivity.this, "Can't review yourself", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(DisplayHostActivity.this, "Can't rate yourself", Toast.LENGTH_SHORT).show();
                     addReviewFloatingButton.setVisibility(View.GONE);
                 }else {
                     addReviewFloatingButton.setVisibility(View.GONE);//add floating layout on screen
