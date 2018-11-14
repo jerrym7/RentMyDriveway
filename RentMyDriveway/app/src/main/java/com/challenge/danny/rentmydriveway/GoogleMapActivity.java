@@ -23,6 +23,8 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptor;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -208,12 +210,14 @@ public class GoogleMapActivity extends AppCompatActivity implements OnMapReadyCa
             Toast.makeText(GoogleMapActivity.this,"Error loading...",Toast.LENGTH_SHORT).show();
             return;
         }
+        BitmapDescriptor icon = BitmapDescriptorFactory.fromResource(R.drawable.parking_map_marker);
         this.markerOptions = new MarkerOptions();
         for (Host hosts: host) {
             Log.d(TAG, "displayMarkerToGoogleMapUI: Longitude" + hosts.getLongitude() + " Latitude " + hosts.getLatitude());
             this.latLngs.add(new LatLng(hosts.getLatitude(), hosts.getLongitude()));
             markerOptions.position(new LatLng(hosts.getLatitude(), hosts.getLongitude()));
             markerOptions.title(hosts.getFullAddress());
+            markerOptions.icon(icon);
             googleMap.addMarker(markerOptions);
         }
        /* for (LatLng coordinates: latLngs) {
