@@ -360,4 +360,11 @@ public class RentingOutActivity extends AppCompatActivity {
         DialogFragment newFragment = new TimePickerFragment();
         newFragment.show(getFragmentManager(),"Pick the time");
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        startActivity(new Intent(RentingOutActivity.this,ChooseServiceActivity.class));
+        finish();
+    }
 }
