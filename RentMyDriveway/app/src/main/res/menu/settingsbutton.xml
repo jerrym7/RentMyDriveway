@@ -12,7 +12,7 @@
 
     <item android:id="@+id/my_orders_mipmap"
         android:icon="@mipmap/orders"
-        android:title="Transactions"
+        android:title="Orders"
         android:iconTint="@color/white"
         />
     <item android:id="@+id/map_mipmap"
