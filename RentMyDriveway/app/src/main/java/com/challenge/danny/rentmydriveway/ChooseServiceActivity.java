@@ -26,7 +26,6 @@ public class ChooseServiceActivity extends AppCompatActivity {
     private ActionBarDrawerToggle mToggle;
     private Toolbar cToolBar;
     private FirebaseHelper firebaseHelper;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,7 +92,6 @@ public class ChooseServiceActivity extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 
     /*
