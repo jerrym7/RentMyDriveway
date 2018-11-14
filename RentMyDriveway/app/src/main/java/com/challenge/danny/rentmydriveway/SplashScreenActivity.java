@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,13 +21,14 @@ public class SplashScreenActivity extends AppCompatActivity {
     private static final String TAG = "SplashScreenActivity";
 
     private static final int ERROR_DIALOG_REQUEST = 1;
+    ImageView logoImageView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
-        TextView logoTextView = findViewById(R.id.logoTextView);
+        logoImageView = findViewById(R.id.icon_imageView);
         FrameLayout whiteFrameLayout =  findViewById(R.id.whiteBackground);
         FrameLayout blueFrameLayout = findViewById(R.id.blueBackground);
         Animation splash_animation = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fade_in);
@@ -58,11 +60,13 @@ public class SplashScreenActivity extends AppCompatActivity {
     public void addFadeInAnimation(final FrameLayout whiteFrameLayout, Animation splash_animation) {
         splash_animation.setAnimationListener(new Animation.AnimationListener() {
             @Override
-            public void onAnimationStart(Animation animation) {}
-
+            public void onAnimationStart(Animation animation) {
+                logoImageView.setVisibility(View.INVISIBLE);
+            }
             @Override
             public void onAnimationEnd(Animation animation) {
                 whiteFrameLayout.setVisibility(View.VISIBLE);
+                logoImageView.setVisibility(View.VISIBLE);
                 Intent intent = new Intent(SplashScreenActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();

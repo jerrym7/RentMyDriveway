@@ -7,5 +7,6 @@
     <color name="lightRed">#FF7F7F</color>
     <color name="aquaMarine">#76EEC6</color>
     <color name="darkGray">#424242</color>
+    <color name="black">#000000</color>
     <color name="blueGray">#37474f</color>
 </resources>
