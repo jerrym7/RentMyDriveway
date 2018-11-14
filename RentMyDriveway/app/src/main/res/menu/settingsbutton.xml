@@ -7,40 +7,45 @@
     <item android:id="@+id/my_account_mipmap"
         android:icon="@mipmap/ic_person_black_24dp"
         android:title="My Account"
+        android:iconTint="@color/white"
         />
 
     <item android:id="@+id/my_orders_mipmap"
         android:icon="@mipmap/orders"
-        android:title="Orders"
+        android:title="Transactions"
+        android:iconTint="@color/white"
         />
     <item android:id="@+id/map_mipmap"
         android:icon="@mipmap/maps"
         android:title="Map"
+        android:iconTint="@color/white"
         />
     <item android:id="@+id/parking_mipmap"
         android:icon="@mipmap/park"
         android:title="Request"
+        android:iconTint="@color/white"
         />
-
-
 
         <item android:id="@+id/qr_scan_mipmap"
             android:icon="@mipmap/qr_scan"
             android:title="Scan QR"
+            android:iconTint="@color/white"
             />
-
 
         <item android:id="@+id/qr_generate_mipmap"
         android:icon="@mipmap/qr_code"
-        android:title="Generate(sample)"
+        android:title="Generate QR"
+            android:iconTint="@color/white"
         />
     <item android:id="@+id/settings_mipmap"
         android:icon="@mipmap/ic_settings_black_24dp"
         android:title="Settings"
+        android:iconTint="@color/white"
         />
     <item android:id="@+id/about_mipmap"
         android:icon="@mipmap/info"
         android:title="About"
+        android:iconTint="@color/white"
         />
     </group>
 </menu>

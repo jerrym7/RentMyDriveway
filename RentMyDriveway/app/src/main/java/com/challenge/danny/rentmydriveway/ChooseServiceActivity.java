@@ -140,8 +140,7 @@ public class ChooseServiceActivity extends AppCompatActivity {
                         Toast.makeText(ChooseServiceActivity.this, "Settings", Toast.LENGTH_SHORT).show();
                         return true;
                     case(R.id.about_mipmap):
-                        startActivity(new Intent(ChooseServiceActivity.this,DisplayHostActivity.class));
-                        Toast.makeText(ChooseServiceActivity.this, DisplayHostActivity.class.getName(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ChooseServiceActivity.this, "About", Toast.LENGTH_SHORT).show();
                         return true;
                     default:return true;
                 }
