@@ -2,6 +2,8 @@ package com.challenge.danny.rentmydriveway;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
@@ -12,7 +14,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.challenge.danny.rentmydriveway.Firebase.FirebaseHelper;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
@@ -21,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
     private TextView registerTextView;
     private Button loginButton;
     private FirebaseHelper firebaseHelper;
+    FirebaseAuth auth;
 
 
     @Override
@@ -35,6 +42,13 @@ public class LoginActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(this); //Initialize the firebase app
         checkFirebaseAuthenticationState();
         buttonClicked();
+        //auto log in
+        auth = FirebaseAuth.getInstance();
+        if(auth.getCurrentUser() == null){
+        }
+        else{
+            emailEditText.setText(auth.getCurrentUser().getEmail());
+        }
     }
 
     private void checkFirebaseAuthenticationState() {
@@ -85,12 +99,18 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void loginUser(String email, String password){
-        if (firebaseHelper.signInUserWithEmailAndPassword(email, password) == false) {
-            startActivity(new Intent(LoginActivity.this, ChooseServiceActivity.class));
-        } else {
-            Toast.makeText(LoginActivity.this, "Unable to login right now. Please try again", Toast.LENGTH_SHORT).show();
-        }
+    private void loginUser(final String email, String password){
+       FirebaseAuth.getInstance().signInWithEmailAndPassword(email,password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+           @Override
+           public void onSuccess(AuthResult authResult) {
+               startActivity(new Intent(LoginActivity.this,ChooseServiceActivity.class));
+           }
+       }).addOnFailureListener(new OnFailureListener() {
+           @Override
+           public void onFailure(@NonNull Exception e) {
+               Toast.makeText(LoginActivity.this,"Something went wrong... :(",Toast.LENGTH_SHORT).show();
+           }
+       });
     }
 
     @Override

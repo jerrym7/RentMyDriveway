@@ -3,6 +3,7 @@ package com.challenge.danny.rentmydriveway;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -32,6 +33,9 @@ public class ChooseServiceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_choose_service);
         setToggleBar(); //set the three dots button(toggle button) and side bar
         Button lookingForParkingButton = (Button) findViewById(R.id.lookingForParkingButton);
+        Snackbar.make((View)findViewById(android.R.id.content),"Welcome "+                  //welcome the user!
+                        FirebaseAuth.getInstance().getCurrentUser().getEmail()+"!",
+                Snackbar.LENGTH_SHORT).show();
         Button rentingOutYourDrivewayButton = (Button) findViewById(R.id.rentingOutYourDrivewayButton);
         checkFirebaseAuthenticationState();
         onButtonsClicked(lookingForParkingButton, rentingOutYourDrivewayButton);

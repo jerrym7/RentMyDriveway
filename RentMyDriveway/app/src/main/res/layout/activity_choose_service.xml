@@ -24,10 +24,10 @@
                 android:id="@+id/lookingForParkingButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/lightRed"
+                android:background="@color/white"
                 android:text="@string/lookingForParking"
                 android:textSize="50dp"
-                android:textColor="@color/white"/>
+                android:textColor="@color/darkGray"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -38,7 +38,7 @@
                 android:id="@+id/rentingOutYourDrivewayButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/aquaMarine"
+                android:background="@color/colorPrimary"
                 android:text="@string/RentingOutYourDriveway"
                 android:textSize="50dp"
                 android:textColor="@color/white"/>

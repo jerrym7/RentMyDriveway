@@ -3,6 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/blueGray"
     xmlns:android="http://schemas.android.com/apk/res/android">
+    <Space
+        android:layout_width="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="80dp"
+        android:id="@+id/first_blank_space"/>
+    <Space
+        android:layout_width="30dp"
+        android:layout_height="10dp"
+        android:id="@+id/second_blank_space"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/first_blank_space"/>
+    <Button
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:id="@+id/checkout_button"
+        android:background="@drawable/circle_button"
+        android:layout_below="@+id/first_blank_space"
+        android:layout_toLeftOf="@+id/second_blank_space"
+        android:drawableTop="@drawable/ic_money_checkout"
+        android:drawableTint="@color/white"
+        android:paddingTop="10dp"
+        android:textSize="11sp"
+        android:text="Rent"
+        android:textColor="@color/white"
+        android:textStyle="italic|bold"/>
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

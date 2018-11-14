@@ -26,7 +26,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText currentEmailEditText;
     private EditText currentpasswordEditText;
     private Button registerButton;
-    private TextView registerTextView;
+    private TextView logInTextView;
     private ScrollView registerScrollView;
     private FirebaseHelper firebaseHelper;
     private ProgressBar registerProgressBar;
@@ -39,7 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
         currentFullNameEditText = findViewById(R.id.input_name);
         currentEmailEditText = findViewById(R.id.input_email);
         currentpasswordEditText = findViewById(R.id.input_password);
-        registerTextView = findViewById(R.id.register_textView);
+        logInTextView = findViewById(R.id.login_textView);
         registerButton = findViewById(R.id.registerButton);
 
         FirebaseApp.initializeApp(this);//Initialize the firebase app
@@ -82,6 +82,13 @@ public class RegisterActivity extends AppCompatActivity {
                         currentpasswordEditText.getText().toString().trim());
             }
         });
+        logInTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+            }
+        });
+
     }
 
     private void registerUser(final String currentName, final String currentEmail, String currentPassword) {
@@ -124,6 +131,7 @@ public class RegisterActivity extends AppCompatActivity {
             Log.d(TAG, "registerUser: User ID: " + userID);
             firebaseHelper.getDatabaseReference().child(userID).setValue(currentUser);
             Log.d(TAG, "registerUser: Firebase Database :" + firebaseHelper.getDatabaseReference().getDatabase());
+            Snackbar.make(registerScrollView,"Welcome "+currentEmail +"!",Snackbar.LENGTH_SHORT).show();
             Intent intent = new Intent(RegisterActivity.this, ChooseServiceActivity.class);
             startActivity(intent);
             RegisterActivity.this.finish();
